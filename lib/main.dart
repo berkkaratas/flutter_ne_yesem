@@ -41,6 +41,27 @@ class _FoodListState extends State<FoodList> {
   int corbaNo = 1;
   int tatliNo = 1;
   int yemekNo = 1;
+  List<String> corbaIsimleri = [
+    'Mercimek Çorbası',
+    'Tarhana Çorbası',
+    'Tavuk Çorbası',
+    'Mantar Çorbası',
+    'Yoğurt Çorbası'
+  ];
+  List<String> yemekIsimleri = [
+    'Karnıyarık',
+    'Mantı',
+    'Kuru Fasulye',
+    'İçli Köfte',
+    'Balık'
+  ];
+  List<String> tatliIsimleri = [
+    'Baklava1',
+    'Baklava2',
+    'tatli1',
+    'tatli2',
+    'Dondurma'
+  ];
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -66,6 +87,14 @@ class _FoodListState extends State<FoodList> {
               ),
             ),
           ),
+          Text(corbaIsimleri[corbaNo - 1]),
+          Container(
+            width: 200,
+            child: Divider(
+              height: 5,
+              color: Color(0xff00796B),
+            ),
+          ),
           Expanded(
             flex: 3,
             child: Padding(
@@ -86,6 +115,14 @@ class _FoodListState extends State<FoodList> {
               ),
             ),
           ),
+          Text(yemekIsimleri[yemekNo - 1]),
+          Container(
+            width: 200,
+            child: Divider(
+              height: 5,
+              color: Color(0xff00796B),
+            ),
+          ),
           Expanded(
             flex: 3,
             child: Padding(
@@ -104,6 +141,14 @@ class _FoodListState extends State<FoodList> {
                 },
                 child: Image.asset('assets/tatli_$tatliNo.jpg'),
               ),
+            ),
+          ),
+          Text(tatliIsimleri[tatliNo - 1]),
+          Container(
+            width: 200,
+            child: Divider(
+              height: 6,
+              color: Color(0xff00796B),
             ),
           ),
           Expanded(
